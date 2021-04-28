@@ -20,6 +20,7 @@ const Login = () => {
                             id="name"
                             placeholder="Full Name"
                             required
+                            autoFocus
                         />
                     </FormGroup>
 
