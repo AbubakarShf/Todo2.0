@@ -1,24 +1,26 @@
-import React from "react";
-import { Container, TodoForm, TodoHeader, ListHere } from "./Todo.element";
+import React, { useState } from "react";
+import { OuterContainer, TaskContainer, ListContainer } from "./Todo.element";
+import AddTask from "../../components/addtask/addtask";
+import TodoList from "../../components/TodoList/todoList";
 const Todo = () => {
+    const [Task, setTask] = useState([]);
     return (
         <React.Fragment>
-            <Container>
-                <TodoForm>
-                    <TodoHeader>
-                        <input
-                            type="text"
-                            name="task"
-                            id="task"
-                            autoFocus
-                            autoComplete
-                            autoCorrect
+            <OuterContainer>
+                <TaskContainer>
+                    <AddTask Task={Task} setTask={setTask} />
+                </TaskContainer>
+                <ListContainer>
+                    {Task.map((task) => (
+                        <TodoList
+                            key={task._id}
+                            task={task}
+                            Task={Task}
+                            setTask={setTask}
                         />
-                        <button type="submit">Add Task</button>
-                    </TodoHeader>
-                    <ListHere></ListHere>
-                </TodoForm>
-            </Container>
+                    ))}
+                </ListContainer>
+            </OuterContainer>
         </React.Fragment>
     );
 };
