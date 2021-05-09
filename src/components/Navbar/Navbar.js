@@ -20,18 +20,12 @@ const Navbar = () => {
                 </NavLink>
                 <Bars />
                 <NavMenu>
-                    <NavLink to="/" exact activeStyle>
+                    <NavLink to="/" exact>
                         Home
                     </NavLink>
-                    <NavLink to="/todo" activeStyle>
-                        Todo
-                    </NavLink>
-                    <NavLink to="/signup" activeStyle>
-                        SignUp
-                    </NavLink>
-                    <NavLink to="/logout" activeStyle>
-                        LogOut
-                    </NavLink>
+                    <NavLink to="/todo">Todo</NavLink>
+                    <NavLink to="/signup">SignUp</NavLink>
+                    <NavLink to="/logout">LogOut</NavLink>
                 </NavMenu>
                 <NavBtn>
                     <NavBtnLink to="/signin">Sign In</NavBtnLink>

@@ -7,10 +7,6 @@ import {
     SubmitButton,
 } from "./Signup.element";
 const Signup = () => {
-    const Admin = {
-        AdName: "Abubakar",
-        AdPassword: "12345",
-    };
     const [details, setDetails] = useState({
         name: "",
         email: "",
@@ -30,6 +26,7 @@ const Signup = () => {
                             id="name"
                             placeholder="Full Name"
                             required
+                            autoFocus
                             onChange={(e) => {
                                 setDetails({
                                     ...details,
